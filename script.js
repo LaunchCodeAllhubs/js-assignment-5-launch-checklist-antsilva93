@@ -19,9 +19,3 @@ window.addEventListener("load", function() {
    //listener for submit function
    
 });
-
-
-
-let pilot = document.get
-
-formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
