@@ -37,10 +37,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let cargo = document.getElementByID('cargoLevel');
     //validate pilot & copilot as string
     //validate fuel & cargo as number
-    validateInput(pilotName) //should be "Not a Number"
-    validateInput(copilotName) //should be "Not a Number"
-    validateInput(fuel) //should be "Is a Number"
-    validateInput(cargo) //should be "Is a Number"
+    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") 
+    {
+       alert("All fields are required!"); 
+    } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number")
+        {
+
+    }
 
 
 

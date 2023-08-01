@@ -1,5 +1,7 @@
 // Write your JavaScript code here!
 
+const { formSubmission } = require("./scriptHelper");
+
 window.addEventListener("load", function() {
 
    let listedPlanets;
@@ -17,3 +19,9 @@ window.addEventListener("load", function() {
    //listener for submit function
    
 });
+
+
+
+let pilot = document.get
+
+formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel)
