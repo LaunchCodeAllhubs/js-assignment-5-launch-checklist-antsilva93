@@ -3,39 +3,33 @@ require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     // Here is the HTML formatting for our mission target div.
-    /*
+    let missionTarget = document.getElementById("missionTarget");
+    missionTarget.innerHTML = `
                  <h2>Mission Destination</h2>
                  <ol>
-                     <li>Name: </li>
-                     <li>Diameter: </li>
+                     <li>Name: ${name} </li>
+                     <li>Diameter: ${diameter} </li>
                      <li>Star: ${star}</li>
-                     <li>Distance from Earth: </li>
-                     <li>Number of Moons: </li>
+                     <li>Distance from Earth: ${distance} </li>
+                     <li>Number of Moons: ${moons}</li>
                  </ol>
-                 <img src="">
-    */
+                 <img src="${imageUrl}">
+                 `    
 }
 
-function validateInput(testInput) {//feels not done
-    let numberInput = Number(testInput);
-    if (numberInput === '') {
+function validateInput(testInput) {
+    if (testInput === '' || testInput === null || testInput === 0) {
         return "Empty";
-    }
-    else if (isNaN(numberInput)) {
-        return "Not a Number";
-    }
-    else if (isNaN(numberInput) === false) {
+    } else if (isNaN(Number(testInput)) === false) {
         return "Is a Number";
+    } else {
+        return "Not a Number";
     }
 }
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    // variables
-    // let pilotName = document.getElementByID('pilotName');
-    // let copilotName = document.getElementByID('copilotName');
-    // let fuel = document.getElementById('fuelLevel');
-    // let cargo = document.getElementByID('cargoLevel');
+   //variables from doc
     let launchStatus = document.getElementById('launchStatus');
     let pilotStatus = document.getElementById('pilotStatus');
     let copilotStatus = document.getElementById('copilotStatus');
